@@ -12,8 +12,8 @@ const redirects = {
   async redirects() {
     return [
       {
-        source: "/old/blogs/:slug*",
-        destination: "whatever your new rewrite url",
+        source: "/",
+        destination: "/neumorphism",
         permanent: true,
       },
     ];

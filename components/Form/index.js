@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useCallback } from "react";
+import { useRouter } from "next/router";
 import { Container, InputWrapper, ButtonWrapper } from "./styles";
 
 function Form() {
+  const router = useRouter();
+
+  const handleChangeMode = useCallback(
+    (e) => {
+      e.preventDefault();
+      console.log(router.pathname);
+      if (router.pathname === "/neumorphism") {
+        router.push("glassmorphism");
+      } else {
+        router.push("neumorphism");
+      }
+    },
+    [router]
+  );
+
   return (
-    <Container>
+    <Container onSubmit={handleChangeMode}>
       <InputWrapper>
         <label htmlFor="name">Nome:</label>
         <input type="text" id="name" name="name" />

@@ -1,10 +1,42 @@
 import React from "react";
-import { Container } from "./styles";
+import Form from "../../components/Form";
+import { Container, Left, Right, Wrapper } from "./styles";
 
 function neumorphism() {
+  const bodyVariants = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+  };
+
+  const formVariants = {
+    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: 100 },
+  };
+
   return (
     <Container>
-      <h1>Neumor</h1>
+      <Left
+        initial="hidden"
+        animate="visible"
+        variants={bodyVariants}
+        transition={{
+          duration: 2,
+        }}
+      />
+      <Right>
+        <Wrapper
+          initial="hidden"
+          animate="visible"
+          variants={formVariants}
+          transition={{
+            duration: 2,
+            delay: 1,
+          }}
+        >
+          <h1>Neumorphism Form</h1>
+          <Form />
+        </Wrapper>
+      </Right>
     </Container>
   );
 }

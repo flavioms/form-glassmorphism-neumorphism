@@ -19,7 +19,7 @@ export const Wrapper = styled(motion.div)`
   padding: 2rem;
   color: #fff;
 
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -37,7 +37,7 @@ export const Wrapper = styled(motion.div)`
   }
 
   input {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -62,6 +62,7 @@ export const Wrapper = styled(motion.div)`
     text-transform: uppercase;
     transition: background 0.2s ease;
     cursor: pointer;
+    outline: none;
 
     &[type="submit"] {
       background: rgba(154, 219, 81, 0.25);

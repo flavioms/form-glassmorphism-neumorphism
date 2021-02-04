@@ -58,6 +58,7 @@ export const Wrapper = styled(motion.div)`
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 2rem;
     color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     font-weight: 600;
     text-transform: uppercase;
     transition: background 0.2s ease;
@@ -65,18 +66,18 @@ export const Wrapper = styled(motion.div)`
     outline: none;
 
     &[type="submit"] {
-      background: rgba(154, 219, 81, 0.25);
+      background: rgba(154, 219, 81, 1);
 
       &:hover {
-        background: rgba(154, 219, 81, 0.5);
+        background: rgba(154, 219, 81, 0.8);
       }
     }
 
     &[type="button"] {
-      background: rgba(255, 35, 63, 0.25);
+      background: rgba(255, 35, 63, 1);
 
       &:hover {
-        background: rgba(255, 35, 63, 0.5);
+        background: rgba(255, 35, 63, 0.8);
       }
     }
   }
